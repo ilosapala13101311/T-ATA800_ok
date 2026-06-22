@@ -48,10 +48,10 @@ overflow:hidden;
   left:5px;
   z-index:100;
   background:white;
-  padding:5px 8px
+  padding:5px 8px;
   border-radius:10px;
-  font-size:14px
-  max-width:90vw
+  font-size:14px;
+  max-width:90vw;
 }
 
 #gameOver{
@@ -65,7 +65,7 @@ overflow:hidden;
   flex-direction:column;
   text-align:center;
   overflow-y:auto;
-  padding:20px
+  padding:20px;
   box-sizing:border-box;
 }
 #intro{
@@ -151,78 +151,33 @@ overflow:hidden;
 
   z-index:9998;
 }
-@media (max-width: 768px){
 
-  #player{
-    width:180px;
-    height:180px;
-    bottom:10px;
-  }
-
-  .childPhoto{
-    width:140px;
-    height:140px;
-  }
-
-  .item{
-    font-size:60px;
-  }
-
-  #hud{
-    font-size:20px;
-    padding:15px;
-  }
-
-  #comboPhoto{
-    width:320px;
-    height:320px;
-  }
-
-}
-@media (max-width: 600px){
-
-  #player{
-    width:120px;
-    height:120px;
-  }
-
-  .childPhoto{
-    width:80px;
-    height:80px;
-  }
-
-  #comboPhoto{
-    width:220px;
-    height:220px;
-  }
-
-  #gameOver{
-    font-size:22px;
-    padding:10px;
-    overflow-y:auto;
-  }
-
-}
 @media (max-width:600px){
 
   #player{
-    width:120px;
-    height:120px;
+    width:90px;
+    height:90px;
+    bottom:40px;
   }
 
   .childPhoto{
-    width:80px;
-    height:80px;
+    width:60px;
+    height:60px;
   }
 
   #comboPhoto{
-    width:220px;
-    height:220px;
+    width:180px;
+    height:180px;
   }
 
   #hud{
-    font-size:18px;
-    padding:6px;
+    font-size:12px;
+    padding:4px 6px;
+  }
+
+  #certPhoto{
+    width:120px;
+    height:120px;
   }
 
   #gameOver{

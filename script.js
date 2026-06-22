@@ -395,33 +395,38 @@ function loop(){
 
   humor = Math.min(100, humor + 10);
 
-  if(item.type.emoji === "👧"){
+ if(item.type.emoji === "👧"){
 
   lastMarysia = Date.now();
 
   const isCombo = (Date.now() - lastJas < 3000);
 
   if(!isCombo){
+    marysiaSound.currentTime = 0;
+    marysiaSound.play().catch(()=>{});
   }
 
-    if(Math.random() < 0.20){
-      showLevelMessage("😘 Marysia daje buziaka!");
-      showHearts();
-    }
-
-    if(Date.now() - lastJas < 3000){
-      score += 500;
-      showLevelMessage("❤️ RODZINNE KOMBO! +500");
-showHearts();
-marysiaSound.pause();
-przytulasSound.pause();
-
-marysiaSound.currentTime = 0;
-przytulasSound.currentTime = 0;
-
-showComboPhoto();
-    }
+  if(Math.random() < 0.20){
+    showLevelMessage("😘 Marysia daje buziaka!");
+    showHearts();
   }
+
+  if(Date.now() - lastJas < 3000){
+
+    score += 500;
+
+    showLevelMessage("❤️ RODZINNE KOMBO! +500");
+    showHearts();
+
+    marysiaSound.pause();
+    przytulasSound.pause();
+
+    marysiaSound.currentTime = 0;
+    przytulasSound.currentTime = 0;
+
+    showComboPhoto();
+  }
+}
 
   if(item.type.emoji === "👦"){
 
