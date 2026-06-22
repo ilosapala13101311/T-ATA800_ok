@@ -259,7 +259,7 @@ function showComboPhoto(){
 
   const comboPhotos = [
     "images/dzieci-kombo.jpg",
-    "images/dzieci-kombo2.jpg"
+    "images/dzieci-kombo2.jpg",
     "images/dzieci-kombo3.jpg"
   ];
 
@@ -494,9 +494,6 @@ marysiaSound.pause();
 
   marysiaSound.currentTime = 0;
   przytulasSound.currentTime = 0;
-
-comboSound.currentTime = 0;
-comboSound.play().catch(()=>{});
   showComboPhoto();
 }
  }
