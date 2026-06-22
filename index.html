@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+<meta charset="UTF-8">
+<title>T-ATA 800</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<div id="intro">
+
+  <img id="startPhoto"
+       src="images/konrad-start.jpg"
+       alt="Konrad">
+
+  <h1>🤖 T-ATA 800</h1>
+  <h2>MISJA: BYCIE NAJLEPSZYM TATĄ NA ŚWIECIE</h2>
+  <p>Agent Konrad został aktywowany</p>
+
+  <button id="playBtn">
+    ▶ START MISJI
+  </button>
+</div>
+<div id="hud">
+  ❤️ Życia: <span id="lives">5</span> |
+  🏆 Punkty: <span id="score">0</span> |
+  😊 Humor Taty: <span id="humor">30</span>%
+</div>
+
+<div id="game">
+ <div id="player"></div>
+</div>
+
+<div id="gameOver">
+
+  <img id="certPhoto"
+       src="images/konrad-z-dziecmi.jpg"
+       alt="Tata Roku">
+
+  <h1>👑 NAJLEPSZY TATA NA ŚWIECIE</h1>
+
+  <h2 id="finalScore"></h2>
+
+  <button onclick="location.reload()">
+    Zagraj ponownie
+  </button>
+
+</div>
+  
+<script src="script.js"></script>
+
+</body>
+</html>
