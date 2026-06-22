@@ -402,8 +402,6 @@ function loop(){
   const isCombo = (Date.now() - lastJas < 3000);
 
   if(!isCombo){
-    marysiaSound.currentTime = 0;
-    marysiaSound.play().catch(()=>{});
   }
 
     if(Math.random() < 0.20){
@@ -421,8 +419,6 @@ przytulasSound.pause();
 marysiaSound.currentTime = 0;
 przytulasSound.currentTime = 0;
 
-comboSound.currentTime = 0;
-comboSound.play().catch(()=>{});
 showComboPhoto();
     }
   }
@@ -454,9 +450,8 @@ marysiaSound.pause();
   marysiaSound.currentTime = 0;
   przytulasSound.currentTime = 0;
 
-  comboSound.currentTime = 0;
-  comboSound.play().catch(()=>{});
-
+comboSound.currentTime = 0;
+comboSound.play().catch(()=>{});
   showComboPhoto();
 }
  }
