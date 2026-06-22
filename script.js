@@ -447,7 +447,19 @@ function loop(){
 
     let item=items[i];
 
-    item.y += item.speed;
+    let speedMultiplier = 1;
+
+if(score >= 20000){
+  speedMultiplier = 2;
+}
+else if(score >= 15000){
+  speedMultiplier = 1.7;
+}
+else if(score >= 10000){
+  speedMultiplier = 1.4;
+}
+
+item.y += item.speed * speedMultiplier;
     item.el.style.top=item.y+"px";
 
     let dx=Math.abs(item.x-playerX);
@@ -455,6 +467,9 @@ function loop(){
     if(dx<55 && item.y>window.innerHeight-100){
 
       score += item.type.points;
+if(score === 10000){
+  showLevelMessage("🔥 TRYB HARD!");
+}
 
    if(item.type.family){
 
