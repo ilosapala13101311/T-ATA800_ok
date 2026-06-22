@@ -260,6 +260,7 @@ function showComboPhoto(){
   const comboPhotos = [
     "images/dzieci-kombo.jpg",
     "images/dzieci-kombo2.jpg"
+    "images/dzieci-kombo3.jpg"
   ];
 
   const randomPhoto =
@@ -276,6 +277,45 @@ function showComboPhoto(){
 
   comboSound.currentTime = 0;
   comboSound.play().catch(()=>{});
+
+  setTimeout(()=>{
+    img.remove();
+  },2000);
+}
+function showGymPhoto(){
+
+  const img = document.createElement("img");
+
+  img.id = "comboPhoto";
+  img.src = "images/konrad-silownia.jpg";
+
+  document.body.appendChild(img);
+
+  setTimeout(()=>{
+    img.remove();
+  },2000);
+}
+function showPizzaPhoto(){
+
+  const img = document.createElement("img");
+
+  img.id = "comboPhoto";
+  img.src = "images/konrad-pizza.jpg";
+
+  document.body.appendChild(img);
+
+  setTimeout(()=>{
+    img.remove();
+  },2000);
+}
+function showGamePhoto(){
+
+  const img = document.createElement("img");
+
+  img.id = "comboPhoto";
+  img.src = "images/konrad-gra.jpg";
+
+  document.body.appendChild(img);
 
   setTimeout(()=>{
     img.remove();
@@ -480,6 +520,7 @@ helenaSound.currentTime = 0;
 mniamSound.currentTime = 0;
   mniamSound.play().catch(()=>{});
   showLevelMessage("🍕 Capriciosa na grubym, raz!");
+showPizzaPhoto();
 }
 if(item.type.emoji==="🏋️"){
   humor = Math.min(100, humor + 5);
@@ -487,6 +528,7 @@ besttataSound.currentTime = 0;
   besttataSound.play().catch(()=>{});
 
   showLevelMessage("💪 TRENING ZALICZONY!");
+showGymPhoto();
 }
        if(item.type.emoji==="🎮"){
   humor = 100;
@@ -494,6 +536,7 @@ graSound.currentTime = 0;
   graSound.play().catch(()=>{});
 
   showLevelMessage("🎮 ZOG!");
+showGamePhoto();
        }
 
 if(item.type.emoji==="💩"){
