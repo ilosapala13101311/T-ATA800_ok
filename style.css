@@ -22,8 +22,8 @@ overflow:hidden;
   left:50%;
   transform:translateX(-50%);
 
-  width:90px;
-  height:90px;
+  width:180px;
+  height:180px;
 
   border-radius:50%;
   overflow:hidden;
@@ -118,8 +118,8 @@ overflow:hidden;
     0 0 40px rgba(255,215,0,.2);
 }
 .childPhoto{
-  width:70px;
-  height:70px;
+  width:140px;
+  height:140px;
   border-radius:50%;
   object-fit:cover;
   border:3px solid white;
@@ -146,11 +146,31 @@ overflow:hidden;
 
   z-index:9998;
 }
-#certPhoto{
-  width:220px;
-  height:220px;
-  object-fit:cover;
-  border-radius:20px;
-  border:5px solid gold;
-  margin-bottom:20px;
+@media (max-width: 768px){
+
+  #player{
+    width:180px;
+    height:180px;
+    bottom:10px;
+  }
+
+  .childPhoto{
+    width:140px;
+    height:140px;
+  }
+
+  .item{
+    font-size:60px;
+  }
+
+  #hud{
+    font-size:20px;
+    padding:15px;
+  }
+
+  #comboPhoto{
+    width:320px;
+    height:320px;
+  }
+
 }

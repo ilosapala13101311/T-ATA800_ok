@@ -387,7 +387,7 @@ function loop(){
 
     let dx=Math.abs(item.x-playerX);
 
-    if(dx<50 && item.y>window.innerHeight-140){
+    if(dx<90 && item.y>window.innerHeight-220){
 
       score += item.type.points;
 
