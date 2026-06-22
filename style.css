@@ -101,17 +101,17 @@ overflow:hidden;
 
 #certPhoto{
 
-  width:280px;
-  height:420px;
+  width:160px;
+  height:160px;
 
-  object-fit:contain;
+  object-fit:cover;
   object-position:center top;
 
   border-radius:20px;
 
   border:5px solid gold;
 
-  margin-bottom:20px;
+  margin-bottom:10px;
 
   box-shadow:
     0 0 20px rgba(255,215,0,.5),
@@ -171,6 +171,58 @@ overflow:hidden;
   #comboPhoto{
     width:320px;
     height:320px;
+  }
+
+}
+@media (max-width: 600px){
+
+  #player{
+    width:120px;
+    height:120px;
+  }
+
+  .childPhoto{
+    width:80px;
+    height:80px;
+  }
+
+  #comboPhoto{
+    width:220px;
+    height:220px;
+  }
+
+  #gameOver{
+    font-size:22px;
+    padding:10px;
+    overflow-y:auto;
+  }
+
+}
+@media (max-width:600px){
+
+  #player{
+    width:120px;
+    height:120px;
+  }
+
+  .childPhoto{
+    width:80px;
+    height:80px;
+  }
+
+  #comboPhoto{
+    width:220px;
+    height:220px;
+  }
+
+  #hud{
+    font-size:18px;
+    padding:6px;
+  }
+
+  #gameOver{
+    padding:10px;
+    overflow-y:auto;
   }
 
 }

@@ -538,6 +538,22 @@ document.getElementById("playBtn")
 
   bgMusic.play();
 
+[
+  marysiaSound,
+  przytulasSound,
+  comboSound,
+  fujkaSound,
+  kupaSound,
+  mniamSound,
+  graSound,
+  helenaSound,
+  besttataSound,
+  kctataSound,
+  endSound
+].forEach(sound=>{
+  sound.load();
+});
+
   document.getElementById("intro")
   .style.display="none";
 
