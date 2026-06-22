@@ -192,17 +192,17 @@ function showNextMessage(){
   msg.innerHTML = text;
 
   msg.style.position = "fixed";
-  msg.style.top = "20px";
+  msg.style.top = "90px";
   msg.style.left = "50%";
   msg.style.transform = "translateX(-50%)";
 
   msg.style.background = "#ffd700";
   msg.style.color = "#000";
 
-  msg.style.padding = "18px 28px";
+  msg.style.padding = "10px 18px";
   msg.style.borderRadius = "20px";
 
-  msg.style.fontSize = "30px";
+  msg.style.fontSize = "20px";
   msg.style.fontWeight = "bold";
 
   msg.style.zIndex = "9999";
@@ -387,7 +387,7 @@ function loop(){
 
     let dx=Math.abs(item.x-playerX);
 
-    if(dx<90 && item.y>window.innerHeight-220){
+    if(dx<55 && item.y>window.innerHeight-100){
 
       score += item.type.points;
 
