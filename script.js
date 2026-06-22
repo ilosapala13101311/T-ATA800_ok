@@ -540,36 +540,10 @@ setInterval(spawnItem,1000);
 document.getElementById("playBtn")
 .addEventListener("click",()=>{
 
-  const sounds = [
-    comboSound,
-    marysiaSound,
-    przytulasSound,
-    fujkaSound,
-    kctataSound,
-    besttataSound,
-    smrodekSound,
-    endSound,
-    kupaSound,
-    mniamSound,
-    graSound,
-    helenaSound
-  ];
-
-  sounds.forEach(sound=>{
-    sound.volume = 0;
-
-    sound.play()
-    .then(()=>{
-      sound.pause();
-      sound.currentTime = 0;
-      sound.volume = 1;
-    })
-    .catch(()=>{});
-  });
-
   bgMusic.play();
 
-  document.getElementById("intro").style.display="none";
+  document.getElementById("intro")
+  .style.display="none";
 
   updateHUD();
   loop();
