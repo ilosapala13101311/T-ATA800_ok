@@ -22,8 +22,8 @@ overflow:hidden;
   left:50%;
   transform:translateX(-50%);
 
-  width:140px;
-  height:140px;
+  width:110px;
+  height:110px;
 
   border-radius:50%;
   overflow:hidden;
@@ -118,8 +118,8 @@ overflow:hidden;
     0 0 40px rgba(255,215,0,.2);
 }
 .childPhoto{
-  width:100px;
-  height:100px;
+  width:90px;
+  height:90px;
   border-radius:50%;
   object-fit:cover;
   border:3px solid white;

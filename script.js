@@ -403,7 +403,7 @@ function loop(){
 
   if(!isCombo){
     marysiaSound.currentTime = 0;
-    marysiaSound.play.catch(()=>{});
+    marysiaSound.play().catch(()=>{});
   }
 
     if(Math.random() < 0.20){
@@ -455,7 +455,7 @@ marysiaSound.pause();
   przytulasSound.currentTime = 0;
 
   comboSound.currentTime = 0;
-  comboSound.play();
+  comboSound.play().catch(()=>{});
 
   showComboPhoto();
 }
