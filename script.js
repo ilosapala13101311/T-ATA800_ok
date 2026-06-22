@@ -465,7 +465,7 @@ item.y += item.speed * speedMultiplier;
 
     let dx=Math.abs(item.x-playerX);
 
-    if(dx<55 && item.y>window.innerHeight-30){
+    if(dx<55 && item.y>window.innerHeight-100){
 
       score += item.type.points;
 if(score >= 10000 && !hardModeShown){
