@@ -504,8 +504,9 @@ kupaSound.currentTime = 0;
 }
 if(item.type.emoji==="🚬"){
   humor=Math.max(0,humor-25);
-fujkaSound.currentTime = 0.catch(()=>{});
-  fujkaSound.play();
+
+  fujkaSound.currentTime = 0;
+  fujkaSound.play().catch(()=>{});
 
   showLevelMessage("🚬 FUJ! TATA NIE PAL!");
 }
