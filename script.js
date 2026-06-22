@@ -275,7 +275,7 @@ function showComboPhoto(){
   document.body.appendChild(img);
 
   comboSound.currentTime = 0;
-  comboSound.play();
+  comboSound.play().catch(()=>{});
 
   setTimeout(()=>{
     img.remove();
@@ -344,7 +344,7 @@ function endGame(){
 
   document.body.appendChild(koniec);
 endSound.currentTime = 0;
-endSound.play();
+endSound.play().catch(()=>{});
 
   bgMusic.pause();
 
@@ -360,7 +360,7 @@ endSound.play();
 
     document.getElementById("gameOver").style.display="flex";
 kctataSound.currentTime = 0;
-kctataSound.play();
+kctataSound.play().catch(()=>{});
 
     document.getElementById("finalScore").innerHTML =
     `
@@ -403,7 +403,7 @@ function loop(){
 
   if(!isCombo){
     marysiaSound.currentTime = 0;
-    marysiaSound.play();
+    marysiaSound.play.catch(()=>{});
   }
 
     if(Math.random() < 0.20){
@@ -422,7 +422,7 @@ marysiaSound.currentTime = 0;
 przytulasSound.currentTime = 0;
 
 comboSound.currentTime = 0;
-comboSound.play();
+comboSound.play().catch(()=>{});
 showComboPhoto();
     }
   }
@@ -435,7 +435,7 @@ showComboPhoto();
 
  if(!isCombo){
   przytulasSound.currentTime = 0;
-  przytulasSound.play();
+  przytulasSound.play().catch(()=>{});
 }
 
     if(Math.random() < 0.20){
@@ -466,32 +466,32 @@ marysiaSound.pause();
       if(item.type.emoji==="🧦"){
         humor=Math.max(0,humor-10);
 smrodekSound.currentTime = 0;
-  smrodekSound.play();
+  smrodekSound.play().catch(()=>{});
         showLevelMessage("🧦 Śmierdząca sprawa!");
       }
 if(item.type.emoji==="🥤"){
         humor=Math.max(0,humor+10);
 helenaSound.currentTime = 0;
-  helenaSound.play();
+  helenaSound.play().catch(()=>{});
         showLevelMessage("🥤 Wincyj cukru!");
       }
       if(item.type.emoji==="🍕"){
   humor = 100;
 mniamSound.currentTime = 0;
-  mniamSound.play();
+  mniamSound.play().catch(()=>{});
   showLevelMessage("🍕 Capriciosa na grubym, raz!");
 }
 if(item.type.emoji==="🏋️"){
   humor = Math.min(100, humor + 5);
 besttataSound.currentTime = 0;
-  besttataSound.play();
+  besttataSound.play().catch(()=>{});
 
   showLevelMessage("💪 TRENING ZALICZONY!");
 }
        if(item.type.emoji==="🎮"){
   humor = 100;
 graSound.currentTime = 0;
-  graSound.play();
+  graSound.play().catch(()=>{});
 
   showLevelMessage("🎮 ZOG!");
        }
@@ -499,12 +499,12 @@ graSound.currentTime = 0;
 if(item.type.emoji==="💩"){
   humor=Math.max(0,humor-15);
 kupaSound.currentTime = 0;
-  kupaSound.play();
+  kupaSound.play().catch(()=>{});
   showLevelMessage("💩 WDEPNIĘTE!");
 }
 if(item.type.emoji==="🚬"){
   humor=Math.max(0,humor-25);
-fujkaSound.currentTime = 0;
+fujkaSound.currentTime = 0.catch(()=>{});
   fujkaSound.play();
 
   showLevelMessage("🚬 FUJ! TATA NIE PAL!");
@@ -540,10 +540,36 @@ setInterval(spawnItem,1000);
 document.getElementById("playBtn")
 .addEventListener("click",()=>{
 
+  const sounds = [
+    comboSound,
+    marysiaSound,
+    przytulasSound,
+    fujkaSound,
+    kctataSound,
+    besttataSound,
+    smrodekSound,
+    endSound,
+    kupaSound,
+    mniamSound,
+    graSound,
+    helenaSound
+  ];
+
+  sounds.forEach(sound=>{
+    sound.volume = 0;
+
+    sound.play()
+    .then(()=>{
+      sound.pause();
+      sound.currentTime = 0;
+      sound.volume = 1;
+    })
+    .catch(()=>{});
+  });
+
   bgMusic.play();
 
-  document.getElementById("intro")
-  .style.display="none";
+  document.getElementById("intro").style.display="none";
 
   updateHUD();
   loop();
