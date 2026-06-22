@@ -107,14 +107,25 @@ el.innerText = type.emoji;
 
 }
 
-const item = {
-el,
-x: Math.random()*(window.innerWidth-50),
-y: -50,
-speed: 4,
-type
-};
+let speed = 4;
 
+if(score >= 20000){
+  speed = 8;
+}
+else if(score >= 15000){
+  speed = 7;
+}
+else if(score >= 10000){
+  speed = 6;
+}
+
+const item = {
+  el,
+  x: Math.random()*(window.innerWidth-50),
+  y: -50,
+  speed: speed,
+  type
+};
 el.style.left = item.x + "px";
 
 game.appendChild(el);
@@ -131,6 +142,20 @@ function updateHUD(){
   if(score >= 3000){
     newLevel = 4;
   }
+if(score >= 10000 && level < 5){
+  level = 5;
+  showLevelMessage("🔥 TRYB HARD!");
+}
+
+if(score >= 15000 && level < 6){
+  level = 6;
+  showLevelMessage("⚡ MEGA HARD!");
+}
+
+if(score >= 20000 && level < 7){
+  level = 7;
+  showLevelMessage("TRYB TYLKO DLA TATY ROKU!");
+}
   else if(score >= 1500){
     newLevel = 3;
   }
