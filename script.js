@@ -26,6 +26,7 @@ let level = 1;
 let gameEnded = false;
 let lastMarysia = 0;
 let lastJas = 0;
+let hardModeShown = false;
 
 const items = [];
 
@@ -449,14 +450,14 @@ function loop(){
 
     let speedMultiplier = 1;
 
-if(score >= 20000){
-  speedMultiplier = 2;
-}
-else if(score >= 15000){
-  speedMultiplier = 1.7;
+if(score >= 5000){
+  speedMultiplier = 1.4;
 }
 else if(score >= 10000){
-  speedMultiplier = 1.4;
+  speedMultiplier = 1.7;
+}
+else if(score >= 15000){
+  speedMultiplier = 2;
 }
 
 item.y += item.speed * speedMultiplier;
@@ -464,10 +465,11 @@ item.y += item.speed * speedMultiplier;
 
     let dx=Math.abs(item.x-playerX);
 
-    if(dx<55 && item.y>window.innerHeight-100){
+    if(dx<55 && item.y>window.innerHeight-30){
 
       score += item.type.points;
-if(score === 10000){
+if(score >= 10000 && !hardModeShown){
+  hardModeShown = true;
   showLevelMessage("🔥 TRYB HARD!");
 }
 
