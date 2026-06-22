@@ -155,14 +155,14 @@ overflow:hidden;
 @media (max-width:600px){
 
   #player{
-    width:90px;
-    height:90px;
-    bottom:40px;
+    width:85px;
+    height:85px;
+    bottom:30px;
   }
 
   .childPhoto{
-    width:60px;
-    height:60px;
+    width:55px;
+    height:55px;
   }
 
   #comboPhoto{
@@ -171,8 +171,9 @@ overflow:hidden;
   }
 
   #hud{
-    font-size:12px;
-    padding:4px 6px;
+    font-size:11px;
+    padding:4px;
+max-width:95vw
   }
 
   #certPhoto{
@@ -183,6 +184,11 @@ overflow:hidden;
   #gameOver{
     padding:10px;
     overflow-y:auto;
+#levelMessage{
+font-size:18px;
+pending:10px 15px;
+max-width: 70vw;
+top:60px;
   }
 
 }
