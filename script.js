@@ -230,7 +230,7 @@ function showNextMessage(){
   msg.style.padding = "10px 25px";
   msg.style.borderRadius = "20px";
   msg.style.maxWidth = "90vw";
-  msg.style.miniWidth = "260px";
+  msg.style.minWidth = "260px";
   msg.style.whiteSpace = "nowrap";
 
   msg.style.fontSize = "20px";
