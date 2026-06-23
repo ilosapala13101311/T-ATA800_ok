@@ -448,16 +448,19 @@ function loop(){
 
     let item=items[i];
 
-    let speedMultiplier = 1;
+    let speedMultiplier = 0.7; // początek wolniej
 
-if(score >= 5000){
-  speedMultiplier = 1.4;
+if(score >= 10000){
+  speedMultiplier = 2.2;
 }
-else if(score >= 10000){
-  speedMultiplier = 1.7;
+else if(score >= 8000){
+  speedMultiplier = 1.8;
 }
-else if(score >= 15000){
-  speedMultiplier = 2;
+else if(score >= 5000){
+  speedMultiplier = 1.3;
+}
+else if(score >= 3000){
+  speedMultiplier = 1;
 }
 
 item.y += item.speed * speedMultiplier;
