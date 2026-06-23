@@ -362,7 +362,7 @@ function showConfetti(){
 
     const conf = document.createElement("div");
 
-@ -470,7 +470,8 @@ else if(score >= 3000){
+else if(score >= 3000){
 }
 
 item.y += item.speed * speedMultiplier;
@@ -371,8 +371,8 @@ item.y += item.speed * speedMultiplier;
 `translate(${item.x}px, ${item.y}px)`;
 
     let dx=Math.abs(item.x-playerX);
-
-@ -598,6 +599,11 @@ if(item.type.emoji==="🚬"){
+}
+if(item.type.emoji==="🚬"){
 
   fujkaSound.currentTime = 0;
   fujkaSound.play().catch(()=>{});
@@ -384,7 +384,7 @@ if(sound.paused){
 
   showLevelMessage("🚬 FUJ! TATA NIE PAL!");
 }
-@ -627,7 +633,7 @@ if(item.type.emoji==="🚬"){
+if(item.type.emoji==="🚬"){
   requestAnimationFrame(loop);
 }
 
