@@ -8,10 +8,12 @@ let score = 0;let humor = 50;let lives = 5;let playerX = window.innerWidth/2;let
 
 const items = [];
 
-const types = [{emoji:"👧", points:100, family},{emoji:"👧", points:100, family},
+const types = [
+  {emoji:"👧", points:100, family:true},
+  {emoji:"👧", points:100, family:true},
 
-{emoji:"👦", points:100, family},{emoji:"👦", points:100, family},
-
+  {emoji:"👦", points:100, family:true},
+  {emoji:"👦", points:100, family:true},
 {emoji:"🏋️", points:50},{emoji:"🥤", points:10},{emoji:"🎮", points:25},{emoji:"🍕", points:500},
 
 {emoji:"🧦", points:-30},{emoji:"💩", points:-50},{emoji:"🚬", points:-100}
@@ -125,7 +127,7 @@ msg.style.position = "fixed";msg.style.top = "45px";msg.style.left = "50%";msg.s
 
 msg.style.background = "#ffd700";msg.style.color = "#000";
 
-msg.style.padding = "10px 25px";msg.style.borderRadius = "20px";msg.style.maxWidth = "90vw";msg.style.miniWidth = "260px";msg.style.whiteSpace = "nowrap";
+msg.style.padding = "10px 25px";msg.style.borderRadius = "20px";msg.style.maxWidth = "90vw";msg.style.minWidth = "260px";msg.style.whiteSpace = "nowrap";
 
 msg.style.fontSize = "20px";msg.style.fontWeight = "bold";
 
