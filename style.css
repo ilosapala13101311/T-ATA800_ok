@@ -134,12 +134,12 @@ body{
   position:fixed;
 
   left:50%;
-  top:20%;
+  top:25%;
 
-  transform:translate(-50%);
+  transform:translateX(-50%);
 
-  width:250px;
-  height:250px;
+  width:180px;
+  height:180px;
 
   object-fit:cover;
 
@@ -151,8 +151,6 @@ body{
 
   z-index:9998;
 }
-
-@media (max-width:600px){
 
 @media (max-width:600px){
 
@@ -175,6 +173,7 @@ body{
   #comboPhoto{
     width:180px;
     height:180px;
+    top:25%;
   }
 
   #hud{
