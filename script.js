@@ -549,8 +549,6 @@ marysiaSound.pause();
   showComboPhoto();
 }
  }
-}
-
 
       if(item.type.emoji==="🧦"){
         humor=Math.max(0,humor-10);
