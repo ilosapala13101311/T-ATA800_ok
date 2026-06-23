@@ -548,7 +548,7 @@ marysiaSound.pause();
   przytulasSound.currentTime = 0;
   showComboPhoto();
 }
- }
+}
 
       if(item.type.emoji==="🧦"){
         humor=Math.max(0,humor-10);
