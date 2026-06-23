@@ -227,8 +227,11 @@ function showNextMessage(){
   msg.style.background = "#ffd700";
   msg.style.color = "#000";
 
-  msg.style.padding = "10px 18px";
+  msg.style.padding = "10px 25px";
   msg.style.borderRadius = "20px";
+  msg.style.maxWidth = "90vw";
+  msg.style.miniWidth = "260px";
+  msg.style.whiteSpace = "nowrap";
 
   msg.style.fontSize = "20px";
   msg.style.fontWeight = "bold";
