@@ -76,7 +76,7 @@ const jasPhotos = [
 "images/jas-mario.jpg",
 "images/jas-piekny.jpg",
 "images/jas-tata.jpg",
-"images/jas-skrzydla.jpg,
+"images/jas-skrzydla.jpg",
 "images/tata_jas_3.jpg"
 
 ];
@@ -309,7 +309,7 @@ function showComboPhoto(){
 
   setTimeout(()=>{
     img.remove();
-  },2000);
+  },3000);
 }
 function showGymPhoto(){
 
@@ -322,7 +322,7 @@ function showGymPhoto(){
 
   setTimeout(()=>{
     img.remove();
-  },2000);
+  },3000);
 }
 function showPizzaPhoto(){
 
@@ -335,7 +335,7 @@ function showPizzaPhoto(){
 
   setTimeout(()=>{
     img.remove();
-  },2000);
+  },3000);
 }
 function showGamePhoto(){
 
@@ -348,7 +348,7 @@ function showGamePhoto(){
 
   setTimeout(()=>{
     img.remove();
-  },2000);
+  },3000);
 }
 function showConfetti(){
 

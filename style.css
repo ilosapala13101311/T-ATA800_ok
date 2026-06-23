@@ -18,7 +18,7 @@ body{
 
 #player{
   position:absolute;
-  bottom:60px;
+  bottom:70px;
   left:50%;
   transform:translateX(-50%);
 
@@ -173,13 +173,13 @@ body{
   #comboPhoto{
     width:180px;
     height:180px;
-    top:25%;
+    top:15%;
   }
 
   #hud{
     font-size:11px;
     padding:4px;
-max-width:95vw
+    max-width:95vw;
   }
 
   #certPhoto{
@@ -190,11 +190,13 @@ max-width:95vw
   #gameOver{
     padding:10px;
     overflow-y:auto;
-#levelMessage{
-font-size:18px;
-pending:10px 15px;
-max-width: 70vw;
-top:60px;
+  }
+
+  #levelMessage{
+    font-size:18px;
+    padding:10px 15px;
+    max-width:70vw;
+    top:60px;
   }
 
 }
