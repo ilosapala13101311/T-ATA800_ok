@@ -404,7 +404,7 @@ function endGame(){
   koniec.style.display = "flex";
   koniec.style.justifyContent = "center";
   koniec.style.alignItems = "center";
-  koniec.style.fontSize = "60px";
+  koniec.style.fontSize = "35px";
   koniec.style.fontWeight = "bold";
   koniec.style.zIndex = "99999";
 
