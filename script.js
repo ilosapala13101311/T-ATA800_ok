@@ -67,7 +67,8 @@ const marysiaPhotos = [
 "images/marysia-princess.jpg",
 "images/marysia-lod.jpg",
 "images/marysia-tata.jpg",
-"images/marysia-zabek.jpg"
+"images/marysia-zabek.jpg",
+"images/tata_moto.jpg"
 
 ];
 
@@ -75,7 +76,8 @@ const jasPhotos = [
 "images/jas-mario.jpg",
 "images/jas-piekny.jpg",
 "images/jas-tata.jpg",
-"images/jas-skrzydla.jpg"
+"images/jas-skrzydla.jpg,
+"images/tata_jas_3.jpg"
 
 ];
 
@@ -286,7 +288,8 @@ function showComboPhoto(){
   const comboPhotos = [
     "images/dzieci-kombo.jpg",
     "images/dzieci-kombo2.jpg",
-    "images/dzieci-kombo3.jpg"
+    "images/dzieci-kombo3.jpg",
+    "images/dzieci-kombo4.jpg"
   ];
 
   const randomPhoto =
