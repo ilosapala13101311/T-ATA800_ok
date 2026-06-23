@@ -230,7 +230,7 @@ function showNextMessage(){
   msg.style.padding = "10px 25px";
   msg.style.borderRadius = "20px";
   msg.style.maxWidth = "90vw";
-  msg.style.miniWidth = "260px";
+  msg.style.minWidth = "260px";
   msg.style.whiteSpace = "nowrap";
 
   msg.style.fontSize = "20px";
@@ -599,11 +599,6 @@ if(item.type.emoji==="🚬"){
 
   fujkaSound.currentTime = 0;
   fujkaSound.play().catch(()=>{});
-}
-if(sound.paused){
-   sound.currentTime = 0;
-   sound.play();
-}
 
   showLevelMessage("🚬 FUJ! TATA NIE PAL!");
 }
