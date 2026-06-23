@@ -357,7 +357,7 @@ function showConfetti(){
 
   const icons = ["🎊","🎉","⭐","🏆","👑"];
 
-  for(let i=0;i<30;i++){
+  for(let i=0;i<15;i++){
 
     const conf = document.createElement("div");
 
@@ -470,7 +470,8 @@ else if(score >= 3000){
 }
 
 item.y += item.speed * speedMultiplier;
-    item.el.style.top=item.y+"px";
+    item.el.style.transform =
+`translate(${item.x}px, ${item.y}px)`;
 
     let dx=Math.abs(item.x-playerX);
 
@@ -598,6 +599,11 @@ if(item.type.emoji==="🚬"){
 
   fujkaSound.currentTime = 0;
   fujkaSound.play().catch(()=>{});
+}
+if(sound.paused){
+   sound.currentTime = 0;
+   sound.play();
+}
 
   showLevelMessage("🚬 FUJ! TATA NIE PAL!");
 }
@@ -627,7 +633,7 @@ if(item.type.emoji==="🚬"){
   requestAnimationFrame(loop);
 }
 
-setInterval(spawnItem,1000);
+setInterval(spawnItem,1500);
 
 document.getElementById("playBtn")
 .addEventListener("click",()=>{
