@@ -220,7 +220,7 @@ function showNextMessage(){
   msg.innerHTML = text;
 
   msg.style.position = "fixed";
-  msg.style.top = "90px";
+  msg.style.top = "55px";
   msg.style.left = "50%";
   msg.style.transform = "translateX(-50%)";
 
